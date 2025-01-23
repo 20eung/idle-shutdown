@@ -1,11 +1,13 @@
 # idle-shutdown
 Create Idle Shutdown from Windows Task Scheduler
 
+Windows OS 작업 스케줄러에 `유휴종료` 작업 등록
+
 1. 유휴상태가 1시간 이상 지속되면
 2. 대기시간 없이 즉시
 3. 시스템종료 명령 실행 - 5분 후 시스템 종료 메시지 출력
    - shutdown /s /t 300 /d p:0:0 /c "컴퓨터를 사용하지 않아 5분 후 종료합니다. 취소하려면 shutdown /a 를 실행하세요."
-4. 5분 간격으로 작업 반복
+4. 5분 간격으로 작업 무한 반복
 
 > Filename: Register_idleShutdown_Task.ps1
 
